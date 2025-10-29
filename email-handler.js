@@ -8,7 +8,7 @@ const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'Wg5X527MYMwivPKvs', // Clave pública de EmailJS
     SERVICE_ID: 'service_i8ylqzi', // Service ID configurado
     TEMPLATE_CLIENTE: 'template_s60kolv', // Template de confirmación para cliente (EmailJS envía copia automática)
-    TEMPLATE_ADMIN: 'template_i5irfjo', // Usar el mismo template o crear uno específico para admin
+    TEMPLATE_ADMIN: 'template_s60kolv', // Usar el mismo template o crear uno específico para admin
     EMAIL_ADMIN: 'lopez.sil.beto@outlook.com' // Email del administrador
 };
 
@@ -135,26 +135,13 @@ async function enviarEmailAdmin(formData) {
     
     // Para el admin, enviamos los datos del cliente pero al email del admin
     const templateParams = {
-        nombre: `[NUEVA SOLICITUD] ${formData.nombre}`,
-        email: EMAILJS_CONFIG.EMAIL_ADMIN, // Email del admin, no del cliente
+        nombre: formData.nombre,
+        email: EMAILJS_CONFIG.EMAIL_ADMIN,
         telefono: formData.telefono,
         ciudad: getCiudadTexto(formData.ciudad, formData.otraCiudad),
         codigoPostal: formData.codigoPostal,
         tipoProyecto: getProyectoTexto(formData.tipoProyecto, formData.otroProyecto),
-        descripcion: `INFORMACIÓN DEL CLIENTE:
-        
-Nombre: ${formData.nombre}
-Email: ${formData.email}
-Teléfono: ${formData.telefono}
-Ciudad: ${getCiudadTexto(formData.ciudad, formData.otraCiudad)}
-Código Postal: ${formData.codigoPostal}
-Proyecto: ${getProyectoTexto(formData.tipoProyecto, formData.otroProyecto)}
-
-DESCRIPCIÓN:
-${formData.descripcion}
-
-*** ESTE ES UN EMAIL DE NOTIFICACIÓN PARA EL EQUIPO DE CASA MOBELLE ***
-*** El cliente ha sido instruido para responder con fotos y medidas del espacio ***`,
+        descripcion: formData.descripcion,
         fecha: new Date().toLocaleDateString('es-MX', {
             year: 'numeric',
             month: 'long',
