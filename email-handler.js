@@ -218,9 +218,15 @@ async function procesarFormularioCotizacion(formData) {
         
         console.log('📊 Datos a enviar:', formData);
         
-        // Enviar solo email al cliente (EmailJS ya te envía copia automáticamente)
+        // 1) correo al cliente
         console.log('📧 Enviando email de confirmación al cliente...');
-        const response = await enviarEmailCliente(formData);
+        await enviarEmailCliente(formData);
+        console.log('✅ Email al cliente enviado');
+
+        // 2) correo al admin
+        console.log('📧 Enviando email de notificación al admin...');
+        await enviarEmailAdmin(formData);
+        console.log('✅ Email al admin enviado');
         
         console.log('✅ Email enviado exitosamente');
         
