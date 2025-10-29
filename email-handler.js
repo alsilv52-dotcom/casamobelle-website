@@ -8,7 +8,6 @@ const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'Wg5X527MYMwivPKvs', // Clave pública de EmailJS
     SERVICE_ID: 'service_i8ylqzi', // Service ID configurado
     TEMPLATE_CLIENTE: 'template_s60kolv' // Template de confirmación para cliente (EmailJS envía copia automática)
-    EMAIL_ADMIN: 'lopez.sil.beto@outlook.com'
 };
 
 // Hacer configuración disponible globalmente para debug
@@ -135,7 +134,7 @@ async function enviarEmailAdmin(formData) {
     // Para el admin, enviamos los datos del cliente pero al email del admin
     const templateParams = {
         nombre: `[NUEVA SOLICITUD] ${formData.nombre}`,
-        email: EMAILJS_CONFIG.EMAIL_ADMIN, // Email del admin, no del cliente
+        email: 'lopez.sil.beto@outlook.com', // Email del admin, no del cliente
         telefono: formData.telefono,
         ciudad: getCiudadTexto(formData.ciudad, formData.otraCiudad),
         codigoPostal: formData.codigoPostal,
@@ -168,7 +167,7 @@ ${formData.descripcion}
     try {
         const response = await emailjs.send(
             EMAILJS_CONFIG.SERVICE_ID,
-            EMAILJS_CONFIG.TEMPLATE_ADMIN,
+            'lopez.sil.beto@outlook.com',
             templateParams
         );
         console.log('✅ Email de notificación enviado al admin:', response);
