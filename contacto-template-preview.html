@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Contacto - Casa Mobelle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #182c72;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 24px;
+            color: #182c72;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        
+        .contact-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid #182c72;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-details h3 {
+            color: #182c72;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .detail-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #182c72;
+            display: inline-block;
+            min-width: 120px;
+        }
+        
+        .response-section {
+            background: linear-gradient(135deg, #182c72 0%, #2d4a8f 100%);
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .response-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .response-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .step-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .services {
+            background-color: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .services h3 {
+            color: #182c72;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+        
+        .service-icon {
+            color: #182c72;
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 2px;
+        }
+        
+        .contact-info {
+            background-color: #182c72;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-details-footer {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn-highlight {
+            background-color: #182c72;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .response-steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+            }
+            
+            .detail-label {
+                min-width: auto;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header con logo -->
+        <div class="header">
+            <img src="https://iili.io/KqBk9qb.png" alt="Casa Mobelle" class="logo">
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="content">
+            <div class="greeting">¡Hola María González!</div>
+            
+            <div class="message">
+                Gracias por contactar a <strong>Casa Mobelle</strong>. Hemos recibido tu mensaje y queremos confirmarte que nuestro equipo lo revisará cuidadosamente para darte la mejor atención personalizada.
+            </div>
+            
+            <!-- Detalles del contacto -->
+            <div class="contact-details">
+                <h3>📝 Resumen de tu Mensaje</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Asunto:</span> Consulta sobre proyecto
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Teléfono:</span> 55 9876 5432
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span> maria.gonzalez@ejemplo.com
+                </div>
+                <div class="detail-item" style="margin-top: 15px;">
+                    <span class="detail-label">Mensaje:</span><br>
+                    <div style="margin-top: 8px; padding: 10px; background-color: white; border-radius: 4px;">
+                        Hola, estoy interesada en renovar mi cocina. Me gustaría conocer más sobre sus diseños y precios. ¿Podrían contactarme para agendar una cita?
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proceso de respuesta -->
+            <div class="response-section">
+                <div class="response-title">🚀 ¿Qué sigue ahora?</div>
+                <div class="response-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Revisión de tu consulta</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Asignación a especialista</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Respuesta en 24 horas máximo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message">
+                Dependiendo de tu consulta, nuestro equipo especializado se pondrá en contacto contigo para brindarte la información más completa y personalizada sobre nuestros servicios.
+            </div>
+            
+            <!-- Servicios -->
+            <div class="services">
+                <h3>🛠️ Nuestros Servicios</h3>
+                <div class="service-item">
+                    <div class="service-icon">🏠</div>
+                    <div><strong>Cocinas Integrales:</strong> Diseños personalizados que combinan funcionalidad y estilo</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">👔</div>
+                    <div><strong>Closets y Vestidores:</strong> Soluciones de almacenamiento a medida</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📚</div>
+                    <div><strong>Muebles Especiales:</strong> Libreros, centros de TV, muebles de baño</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎨</div>
+                    <div><strong>Diseño Personalizado:</strong> Asesoría completa desde el concepto hasta la instalación</div>
+                </div>
+            </div>
+            
+            <div class="message">
+                ¿Necesitas una cotización personalizada? No dudes en visitarnos o solicitar una cita para que podamos conocer tu proyecto en detalle.
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://casamobelle.com/cotiza.html" class="btn-highlight">Solicitar Cotización Personalizada</a>
+            </div>
+        </div>
+        
+        <!-- Información de contacto -->
+        <div class="contact-info">
+            <div class="contact-title">📞 ¿Tienes alguna pregunta adicional?</div>
+            <div class="contact-details-footer">
+                <strong>WhatsApp:</strong> +52 1 722 289 6977<br>
+                <strong>Teléfono:</strong> +52 722 271 3638<br>
+                <strong>Dirección:</strong> Av Tecnológico 1834, San Salvador Tizatlali, 52172 Méx.<br><br>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/CasaMobelle" class="social-link">📘 Facebook</a>
+                    <a href="https://www.instagram.com/casamobelle/" class="social-link">📷 Instagram</a>
+                    <a href="https://wa.me/5217222896977" class="social-link">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2023 Casa Mobelle - Todos los derechos reservados</p>
+            <p>Este es un correo automático, por favor no responder a esta dirección.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Casa Mobelle - Proyectos de Cocinas, Closets y Muebles a Medida</title>
+    <meta name="description" content="Explora la galería de proyectos Casa Mobelle. Cocinas integrales, closets, vestidores, libreros y muebles de baño realizados con diseño personalizado y calidad superior.">
+    <meta name="keywords" content="galería proyectos, cocinas realizadas, closets instalados, Casa Mobelle, portfolio carpintería, muebles ejecutados, proyectos terminados">
+    <meta name="author" content="Casa Mobelle">
+    <meta property="og:title" content="Galería Casa Mobelle - Proyectos Realizados">
+    <meta property="og:description" content="Descubre nuestros proyectos de cocinas, closets y muebles a medida. Inspiración real de trabajos terminados.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://casamobelle.com/galeria.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galería Casa Mobelle - Proyectos Terminados">
+    <meta name="twitter:description" content="Inspiración real: cocinas, closets y muebles a medida ejecutados por Casa Mobelle.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos de galeria.html */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--azul-profundo);
+            color: var(--blanco);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--azul-profundo);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 48px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--blanco);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        /* Botón especial para cotización personalizada */
+        .menu-cotiza-btn {
+            background: #fffbe7;
+            color: var(--azul-profundo) !important;
+            border-radius: 999px;
+            padding: 2px 12px !important;
+            font-weight: 600;
+            font-size: 16px;
+            margin-right: 6px;
+            box-shadow: 0 1px 4px rgba(239,201,61,0.08);
+            border: 1.5px solid var(--amarillo-mostaza);
+            transition: background 0.2s, color 0.2s;
+            text-transform: uppercase;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .menu-cotiza-btn:hover {
+            background: var(--amarillo-mostaza);
+            color: var(--azul-profundo) !important;
+        }
+
+        nav ul li a:hover {
+            color: var(--amarillo-mostaza);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--amarillo-mostaza);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(42, 51, 113, 0.9), rgba(42, 51, 113, 0.7)), url('https://images.unsplash.com/photo-1601760561441-16420502c7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 40px 0 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(42, 51, 113, 0.7), rgba(42, 51, 113, 0.95));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: var(--blanco);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: var(--gris-suave);
+        }
+
+        /* Botón cotización personalizada */
+        .cotiza-btn {
+            display: inline-block;
+            background-color: var(--amarillo-mostaza);
+            color: var(--azul-profundo);
+            padding: 16px 36px;
+            border-radius: 30px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .cotiza-btn:hover {
+            background: var(--blanco);
+            color: var(--azul-profundo);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .discover-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--blanco);
+            padding: 16px 36px;
+            border-radius: 30px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            border: 2px solid var(--blanco);
+            cursor: pointer;
+            margin: 10px;
+        }
+        .discover-btn:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Sección de proyectos */
+        .project-section {
+            padding: 50px 0 50px;
+        }
+
+        .project-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            color: var(--amarillo-mostaza);
+            position: relative;
+        }
+
+        /* Offset para scroll suave que compense el header sticky */
+        .project-section {
+            scroll-margin-top: 100px; /* Compensa la altura del header sticky */
+        }
+
+        .project-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background-color: var(--amarillo-mostaza);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            height: 320px;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--blanco);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-overlay p {
+            font-size: 1rem;
+            color: var(--gris-suave);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .footer-address {
+            color: var(--gris-suave);
+            max-width: 400px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--amarillo-mostaza);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--amarillo-mostaza);
+            color: var(--azul-profundo);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            color: var(--gris-suave);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 2.6rem; }
+            .hero-content p { font-size: 1.2rem; }
+            .project-title { font-size: 2.4rem; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--azul-profundo);
+                padding: 20px;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: clip-path 0.4s;
+            }
+            
+            nav.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .menu-cotiza-btn {
+                order: -1;
+                margin: 0 0 6px 0;
+                width: auto;
+                max-width: none;
+                font-size: 16px;
+                padding: 6px 12px !important;
+                border-radius: 999px;
+                background: #fffbe7;
+                color: var(--azul-profundo) !important;
+                border: 1.5px solid var(--amarillo-mostaza);
+                box-shadow: 0 1px 4px rgba(239,201,61,0.08);
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                white-space: nowrap;
+            }
+            
+            .gallery-grid {
+                gap: 20px;
+            }
+            
+            .cotiza-btn, .discover-btn {
+                padding: 14px 28px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero { padding: 25px 0 15px; }
+            .hero-content h1 { 
+                font-size: 1.8rem; 
+                margin-bottom: 8px;
+            }
+            .hero-content p { 
+                font-size: 0.95rem; 
+                margin: 0 auto 15px;
+            }
+            .project-section {
+                padding: 30px 0 50px;
+            }
+            .project-title { font-size: 2rem; }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cotiza-btn, .discover-btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="Images/Logos/LogHor2.png" alt="Casa Mobelle Logo" style="height:48px; width:auto; display:block;">
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="cotiza.html" class="menu-cotiza-btn">Cotización personalizada</a></li>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería de proyectos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Nuestros Proyectos Destacados</h1>
+            <p>Combinamos diseño inteligente, materiales de alta calidad y adaptabilidad para maximizar cada metro cuadrado.</p>
+        </div>
+    </section>
+
+    <!-- Sección Closets / Vestidores -->
+    <section class="project-section" id="closets">
+        <div class="container">
+            <h2 class="project-title">Closets / Vestidores</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/Vestidor1.jpg" alt="Vestidor moderno" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Vestidor Minimalista</h3>
+                        <p>Diseño contemporáneo con iluminación LED</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/Closetconcostado.jpg" alt="Closet abatible" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Closet abatible</h3>
+                        <p>Optimiza espacio y agrega estética</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/Vestidor.jpg" alt="Vestidor de cuarto completo" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Vestidor de cuarto completo</h3>
+                        <p>Diseño elegante y amplios espacios que combinan orden, estilo y confort.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/Closetabatible.jpg" alt="Clóset abatible de diseño moderno" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Clóset abatible de diseño moderno</h3>
+                        <p>con puertas elegantes y acabados que aportan sofisticación a la habitación.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/c68ad9c1-fb10-4bc0-98db-5bd53d51028f.jpg" alt="Vestidor integrado al dormitorio" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Vestidor integrado al dormitorio</h3>
+                        <p>Diseño abierto y armónico que combina almacenamiento eficiente y acabados que se fusionan con el estilo de la habitación.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Closetsyvestidores/closetconproceso.jpg" alt="Clóset con puertas elegantes" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Clóset con puertas elegantes</h3>
+                        <p>Apertura suave que revela un interior organizado y funcional para aprovechar al máximo cada espacio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-buttons">
+                <a href="https://www.instagram.com/casamobelle/" class="discover-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i> Descubrir más
+                </a>
+                <a href="cotiza.html" class="cotiza-btn">
+                    <i class="fas fa-calculator"></i> Cotización personalizada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cocinas -->
+    <section class="project-section" id="cocinas">
+        <div class="container">
+            <h2 class="project-title">Cocinas</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinalineal2.jpg" alt="Cocina Lineal" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina Lineal</h3>
+                        <p>Diseño práctico y estilizado, ideal para optimizar el espacio con todos los elementos dispuestos en una sola pared.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinaenL.jpg" alt="Cocina en L" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina en L</h3>
+                        <p>Distribución versátil que aprovecha las esquinas para crear un ambiente funcional y abierto.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinaenu.jpg" alt="Cocina en U" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina en U</h3>
+                        <p>Espacio envolvente que maximiza la superficie de trabajo y el almacenamiento en tres frentes.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinaconisla.jpg" alt="Cocina con isla" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina con isla</h3>
+                        <p>Elegancia y funcionalidad en un diseño que añade una zona central para preparar, convivir y disfrutar.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinatorredehornos.jpg" alt="Cocina con torre de hornos" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina con torre de hornos</h3>
+                        <p>Estilo moderno y ergonómico que integra hornos a la altura ideal para comodidad y diseño.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Cocinas/cocinadelujo.jpg" alt="Cocina de Lujo" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cocina de Lujo</h3>
+                        <p>Acabados premium, tecnología de vanguardia y un diseño que combina estética y alto rendimiento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-buttons">
+                <a href="https://www.instagram.com/casamobelle/" class="discover-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i> Descubrir más
+                </a>
+                <a href="cotiza.html" class="cotiza-btn">
+                    <i class="fas fa-calculator"></i> Cotización personalizada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Soluciones de almacenamiento -->
+    <section class="project-section" id="soluciones">
+        <div class="container">
+            <h2 class="project-title">Soluciones de almacenamiento</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/Otros/Centros de TV/Centrotv1.jpg" alt="Centro de TV" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Centro de TV</h3>
+                        <p>Diseño contemporáneo que combina líneas limpias y funcionalidad para organizar tu equipo multimedia con estilo.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/Centros de TV/centrotv2.jpg" alt="Centro de TV elegante" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Centro de TV</h3>
+                        <p>Mueble elegante con acabados refinados, ideal para ser el foco principal de tu sala con espacio para decoración y dispositivos.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/Librero1.jpg" alt="Escritorio con Almacenamiento" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Escritorio con Almacenamiento</h3>
+                        <p>Estructura robusta y diseño inteligente que integra almacenamiento vertical y horizontal para máxima eficiencia.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/escritorio.jpg" alt="Escritorio funcional" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Escritorio con Almacenamiento</h3>
+                        <p>Espacio de trabajo funcional con cajones inferiores y estantes superiores que facilitan la organización diaria.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/centrodecafe.jpg" alt="Centro de Café" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Centro de Café</h3>
+                        <p>Estación práctica y estilizada para preparar café, con espacio pensado para mantener todo ordenado y accesible.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/vitrinaconiluminacion.jpg" alt="Vitrina con Iluminación" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Vitrina con Iluminación</h3>
+                        <p>Elegante exhibidor que resalta tus objetos favoritos mediante una iluminación sutil y acabados de calidad.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/Muebles de baño/muebledebaño1.jpg" alt="Mueble de Baño" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Mueble de Baño</h3>
+                        <p>Compacto y resistente, ofrece almacenamiento práctico sin sacrificar el estilo ni la sofisticación.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/Muebles de baño/muebledebaño2.jpg" alt="Mueble de Baño minimalista" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Mueble de Baño</h3>
+                        <p>Diseño minimalista con materiales duraderos que optimizan el espacio y aportan un toque moderno al baño.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/Otros/cabecera.jpg" alt="Cabecera con Iluminación" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Cabecera con Iluminación</h3>
+                        <p>Combina confort y diseño moderno, creando un ambiente cálido y acogedor en tu dormitorio gracias a su luz integrada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-buttons">
+                <a href="https://www.instagram.com/casamobelle/" class="discover-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i> Descubrir más
+                </a>
+                <a href="cotiza.html" class="cotiza-btn">
+                    <i class="fas fa-calculator"></i> Cotización personalizada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="Images/Logos/Letrassf.png" alt="Casa Mobelle" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="footer-address">
+                Av Tecnológico 1834, San Salvador Tizatlali, 52172 San Salvador Tizatlalli, Méx.
+            </div>
+            <div class="footer-links">
+                <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+                <a href="Aviso_de_Privacidad_CasaMobelle_Actualizado.pdf" target="_blank">Aviso de Privacidad</a>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-icon visa" title="Visa">
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-icon mastercard" title="Mastercard">
+                    <i class="fab fa-cc-mastercard"></i>
+                </div>
+                <div class="payment-icon paypal" title="PayPal">
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <div class="payment-icon mercadopago" title="Mercado Pago">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/CasaMobelle" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/casamobelle/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5217222896977?text=Hola%20Casa%20Mobelle%20%F0%9F%91%8B" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Casa Mobelle - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

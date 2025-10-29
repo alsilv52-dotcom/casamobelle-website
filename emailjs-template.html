@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Cotización - Casa Mobelle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #182c72;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 24px;
+            color: #182c72;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        
+        .project-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid #182c72;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .project-details h3 {
+            color: #182c72;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .detail-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #182c72;
+            display: inline-block;
+            min-width: 120px;
+        }
+        
+        .process-section {
+            background: linear-gradient(135deg, #182c72 0%, #2d4a8f 100%);
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .process-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .step-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .guarantees {
+            background-color: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .guarantees h3 {
+            color: #182c72;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .guarantee-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+        
+        .guarantee-icon {
+            color: #182c72;
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 2px;
+        }
+        
+        .contact-info {
+            background-color: #182c72;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-details {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn-highlight {
+            background-color: #182c72;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+            }
+            
+            .detail-label {
+                min-width: auto;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header con logo -->
+        <div class="header">
+            <img src="https://iili.io/KqBk9qb.png" alt="Casa Mobelle" class="logo">
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="content">
+            <div class="greeting">¡Hola {{nombre}}!</div>
+            
+            <div class="message">
+                Gracias por contactar a <strong>Casa Mobelle</strong>. Hemos recibido tu solicitud de cotización y queremos confirmarte que está siendo procesada por nuestro equipo de especialistas.
+            </div>
+            
+            <!-- Detalles del proyecto -->
+            <div class="project-details">
+                <h3>📋 Resumen de tu Proyecto</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Ubicación:</span> {{ciudad}}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Tipo de proyecto:</span> {{tipoProyecto}}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Teléfono:</span> {{telefono}}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span> {{email}}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Código postal:</span> {{codigoPostal}}
+                </div>
+                <div class="detail-item" style="margin-top: 15px;">
+                    <span class="detail-label">Descripción:</span><br>
+                    <div style="margin-top: 8px; padding: 10px; background-color: white; border-radius: 4px;">
+                        {{descripcion}}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proceso siguiente -->
+            <div class="process-section">
+                <div class="process-title">🚀 ¿Qué sigue ahora?</div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Análisis detallado de tu proyecto</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Contacto para aclarar detalles</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Cotización en 72 horas máximo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message">
+                Nuestro equipo revisará cuidadosamente todos los detalles de tu proyecto y te contactaremos pronto para aclarar cualquier duda y proporcionarte la mejor cotización personalizada.
+            </div>
+            
+            <!-- Garantías -->
+            <div class="guarantees">
+                <h3>✨ Nuestras Garantías</h3>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🛡️</div>
+                    <div><strong>Garantía de Calidad:</strong> Un año por defectos de fabricación</div>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🔧</div>
+                    <div><strong>Servicio Post-Venta:</strong> Soporte completo después de la instalación</div>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">🏆</div>
+                    <div><strong>Materiales Premium:</strong> Solo materiales de la más alta calidad</div>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">👥</div>
+                    <div><strong>Equipo Experto:</strong> Años de experiencia en diseño y fabricación</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Información de contacto -->
+        <div class="contact-info">
+            <div class="contact-title">📞 ¿Tienes alguna pregunta?</div>
+            <div class="contact-details">
+                <strong>WhatsApp:</strong> +52 1 722 289 6977<br>
+                <strong>Dirección:</strong> Av Tecnológico 1834, San Salvador Tizatlali, 52172 Méx.<br><br>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/CasaMobelle" class="social-link">📘 Facebook</a>
+                    <a href="https://www.instagram.com/casamobelle/" class="social-link">📷 Instagram</a>
+                    <a href="https://wa.me/5217222896977?text=Hola%20Casa%20Mobelle%20%F0%9F%91%8B" class="social-link">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2023 Casa Mobelle - Todos los derechos reservados</p>
+            <p>Este es un correo automático, por favor no responder a esta dirección.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

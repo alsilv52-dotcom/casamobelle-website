@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Mobelle - Cocinas, Closets y Muebles a Medida | Carpintería Profesional</title>
+    <meta name="description" content="Casa Mobelle - Especialistas en cocinas integrales, closets, vestidores y muebles a medida. 30 años de experiencia creando espacios únicos con diseño personalizado y calidad garantizada.">
+    <meta name="keywords" content="cocinas integrales, closets a medida, vestidores, muebles personalizados, carpintería, Casa Mobelle, diseño interior, muebles de baño">
+    <meta name="author" content="Casa Mobelle">
+    <meta property="og:title" content="Casa Mobelle - Muebles a Medida y Cocinas Integrales">
+    <meta property="og:description" content="Transformamos espacios con muebles únicos hechos a medida. Cocinas, closets, vestidores y más con 30 años de experiencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://casamobelle.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa Mobelle - Muebles a Medida">
+    <meta name="twitter:description" content="Especialistas en cocinas integrales, closets y muebles personalizados con 30 años de experiencia.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home-styles.css">
+</head>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="Images/Logos/LogHor2.png" alt="Casa Mobelle Logo" style="height:48px; width:auto; display:block;">
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="cotiza.html" class="menu-cotiza-btn">Cotización personalizada</a></li>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería de proyectos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('Images/Closetsyvestidores/Vestidor1.jpg')">
+                <div class="carousel-content">
+                    <h2>Clósets y Vestidores Organizados</h2>
+                    <p>Maximiza tu espacio con nuestros diseños personalizados</p>
+                    <button class="carousel-btn" onclick="location.href='galeria.html#closets'">Ver Galería</button>
+                </div>
+            </div>
+            
+            <div class="carousel-item" style="background-image: url('Images/Cocinas/cocinadelujo.jpg')">
+                <div class="carousel-content">
+                    <h2>Cocinas de Ensueño</h2>
+                    <p>Diseños que inspiran, creados a la medida de tu espacio</p>
+                    <button class="carousel-btn" onclick="location.href='galeria.html#cocinas'">Ver Galería</button>
+                </div>
+            </div>
+            
+            <div class="carousel-item" style="background-image: url('Images/Otros/Librero1.jpg')">
+                <div class="carousel-content">
+                    <h2>Soluciones de Almacenamiento</h2>
+                    <p>Optimiza tu espacio con muebles funcionales y estilizados</p>
+                    <button class="carousel-btn" onclick="location.href='galeria.html#soluciones'">Ver Galería</button>
+                </div>
+            </div>
+            
+            <div class="carousel-item" style="background-image: url('Images/Otros/Centros de TV/Centrotv1.jpg')">
+                <div class="carousel-content">
+                    <h2>Centros de TV y Más</h2>
+                    <p>Organiza tu hogar con diseño contemporáneo y funcional</p>
+                    <button class="carousel-btn" onclick="location.href='galeria.html#soluciones'">Ver Galería</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-indicators">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
+            <div class="indicator" data-index="3"></div>
+        </div>
+    </section>
+
+    <!-- Botón de cotización personalizada -->
+    <div style="text-align:center; margin: 32px 0 0 0;">
+        <a href="cotiza.html" class="cotiza-btn">
+            solicita tu cotización personalizada
+        </a>
+    </div>
+    </section>
+
+    <section class="text-section">
+        <div class="container">
+            <div class="features-carousel-container">
+                <button class="feature-nav-btn feature-prev" onclick="prevFeature()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="feature-nav-btn feature-next" onclick="nextFeature()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="features-carousel">
+
+                    <div class="feature active">
+                        <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                        <div class="feature-content">
+                            <h3>Envío e Instalación Gratuita</h3>
+                            <p>El envío e instalación de nuestro mobiliario están incluidos en el costo total del proyecto<br>
+                                *Consulta zona de servicio
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div class="feature-content">
+                            <h3>A Medida</h3>
+                            <p>Transformamos tus ideas en muebles únicos, hechos a la medida de tus espacios y pensados para maximizar funcionalidad, estilo y confort en cada proyecto</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-object-group"></i></div>
+                        <div class="feature-content">
+                            <h3>Diseño Personalizado</h3>
+                            <p>Materiales, colores y acabados seleccionados para integrarse con tu estilo y crear espacios únicos, funcionales y atemporales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="feature-content">
+                            <h3>Área de Servicio</h3>
+                            <p>Nuestra cobertura se extiende principalmente dentro del Estado de México y la Ciudad de México, con posibilidad de atender zonas cercanas según la necesidad, siempre garantizando una operación eficiente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                        <div class="feature-content">
+                            <h3>Calidad Garantizada</h3>
+                            <p>Somos diseñadores y fabricantes con 30 años de experiencia, creando muebles a la medida que no solo se ajustan perfectamente a tus espacios, sino que elevan tu forma de vivir, combinando funcionalidad, estética y personalidad en cada detalle</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+            <!-- Sección Explora nuestros productos -->
+            <section class="productos-section">
+                <div class="container">
+                    <h2 style="color: var(--amarillo-mostaza); margin-bottom: 32px;">Explora nuestros productos</h2>
+                    <div class="productos-grid">
+                        <a href="galeria.html#closets" class="producto-card" style="text-decoration:none; color:inherit;">
+                            <img src="Images/Closetsyvestidores/Vestidor1.jpg" alt="Clósets y Vestidores">
+                            <h3>Clósets y Vestidores</h3>
+                        </a>
+                        <a href="galeria.html#cocinas" class="producto-card" style="text-decoration:none; color:inherit;">
+                            <img src="Images/Cocinas/cocinadelujo.jpg" alt="Cocinas">
+                            <h3>Cocinas</h3>
+                        </a>
+                        <a href="galeria.html#soluciones" class="producto-card" style="text-decoration:none; color:inherit;">
+                            <img src="Images/Otros/Centros de TV/Centrotv1.jpg" alt="Soluciones de Almacenamiento">
+                            <h3>Soluciones de Almacenamiento</h3>
+                        </a>
+                    </div>
+                <div style="text-align:center; margin: 32px 0 0 0;">
+                    <a href="cotiza.html" class="cotiza-btn">
+                        solicita tu cotización personalizada
+                    </a>
+                </div>
+                </div>
+            </section>
+            
+            <h2>Descubre la calidad en vivo</h2>
+            <img src="Images/Otros/Gemini_Generated_Image_g4oxvug4oxvug4ox.png" alt="Fachada Casa Mobelle" class="proceso-img">
+            <p>Te invitamos a visitar nuestra exhibición, donde podrás ver y tocar ejemplos reales de nuestro trabajo. Explora materiales, texturas y acabados, inspírate con proyectos ya montados y recibe una <strong>cotización gratuita al instante</strong>. Ven y comprueba por ti mismo cómo transformamos ideas en espacios elegantes, funcionales y hechos para durar.</p>
+            
+            <div class="map-container-small">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4741684857447!2d-99.6062!3d19.2841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd897fa7b0b84d%3A0x7a7e5c4b9c0d8e9f!2sAv%20Tecnol%C3%B3gico%201834%2C%20San%20Salvador%20Tizatlali%2C%2052172%20Metepec%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1640995200000!5m2!1ses!2smx" width="100%" height="200" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de opiniones de Google -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-carousel-container">
+                <div class="testimonials-carousel" id="testimonialsCarousel">
+                    
+                    <a class="testimonial-card" href="https://goo.gl/maps/YSuu9yPQHoJPiadg6" target="_blank" rel="noopener noreferrer">
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #4285f4;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-header">
+                            <div class="profile-avatar">AD</div>
+                            <div class="profile-info">
+                                <div class="testimonial-author">Azucena D.</div>
+                                <div class="testimonial-date">Febrero 2025</div>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">
+                            Compra del 17 de enero, 2025. Llegue preguntando por un diseño que aprovechara al
+máximo el estrecho espacio disponible en las recamaras, me convenció la explicación y acomodo de lo que yo necesitaba de mobiliario. Actitud profesional desde la toma de medidas en habitación e instalación en 2 días. Quede muy satisfecha con la vista desde el render hasta la puesta final, precios competitivos, materiales de calidad, definitivamente extiendo mi amplia recomendación.
+                        </div>
+                    </a>
+                    
+                    <a class="testimonial-card" href="https://goo.gl/maps/tjwz3k43Yuw17v6x5?g_st=aw" target="_blank" rel="noopener noreferrer">
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #4285f4;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-header">
+                            <div class="profile-avatar">DH</div>
+                            <div class="profile-info">
+                                <div class="testimonial-author">Daniel H.</div>
+                                <div class="testimonial-date">Junio 2025</div>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">
+                            Antes de trabajar con casa Mobelle vimos otras opciones pero nos decidimos a realizar nuestra cocina  con ellos y fue la mejor decisión que pudimos tomar, siempre muy profesionales, cumplieron con todo lo pactado en tiempo y forma, el diseño, la calidad de los materiales y la expertis de los trabajadores hicieron que el proyecto fuera de nuestro total agrado, estamos muy agradecidos y satisfechos.
+                        </div>
+                    </a>
+                    
+                    <a class="testimonial-card" href="https://goo.gl/maps/npYi1i6KFmrzLKWx9?g_st=aw" target="_blank" rel="noopener noreferrer">
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #4285f4;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-header">
+                            <div class="profile-avatar">VF</div>
+                            <div class="profile-info">
+                                <div class="testimonial-author">Verónica F.</div>
+                                <div class="testimonial-date">Abril 2025</div>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">
+                            Me sorprendió gratamente que se cumpliera en estricto tiempo y forma el tiempo de entrega del trabajo y La mejor calidad. Muy creativos también. Quedo con una excelente opinión.
+                        </div>
+                    </a>
+                    
+                    <a class="testimonial-card" href="https://goo.gl/maps/PHhccdqUUcrCJUpE7?g_st=aw" target="_blank" rel="noopener noreferrer">
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #4285f4;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-header">
+                            <div class="profile-avatar">ID</div>
+                            <div class="profile-info">
+                                <div class="testimonial-author">Iván D.</div>
+                                <div class="testimonial-date">Febrero 2025</div>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">
+                            Quiero recomendar de manera muy amplia a Casa Mobelle, la Arquitecta y su equipo de trabajo son todos unos profesionales en el tema, estamos encantados con su trabajo, nos fabricaron a medida el Vestidor de Alto brillo 🔆  un segundo closet  también y un mueble para baño con acabados de cristal precioso, infinitas gracias., continuaremos pidiendo más muebles para el hogar ... salu2.
+                        </div>
+                    </a>
+                    
+                    <a class="testimonial-card" href="https://goo.gl/maps/R9Y5rwJqaffv2HzC9?g_st=aw" target="_blank" rel="noopener noreferrer">
+                        <div class="google-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #4285f4;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-header">
+                            <div class="profile-avatar">RV</div>
+                            <div class="profile-info">
+                                <div class="testimonial-author">Rogelio V.</div>
+                                <div class="testimonial-date">Enero 2025</div>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">
+                            Son muy profesionales en su trabajo, son muy amables, quedamos muy satisfechos con el trabajo realizado, los recomendamos ampliamente sin dudarlo
+Gracias!!
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="scroll-hint">
+                    <i class="fas fa-arrow-left"></i>
+                    Desliza para ver más opiniones
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="Images/Logos/Letrassf.png" alt="Casa Mobelle" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="footer-address">
+                Av Tecnológico 1834, San Salvador Tizatlali, 52172 San Salvador Tizatlalli, Méx.
+            </div>
+            <div class="footer-links">
+                <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+                <a href="Aviso_de_Privacidad_CasaMobelle_Actualizado.pdf" target="_blank">Aviso de Privacidad</a>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-icon visa" title="Visa">
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-icon mastercard" title="Mastercard">
+                    <i class="fab fa-cc-mastercard"></i>
+                </div>
+                <div class="payment-icon paypal" title="PayPal">
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <div class="payment-icon mercadopago" title="Mercado Pago">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/CasaMobelle" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/casamobelle/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5217222896977?text=Hola%20Casa%20Mobelle%20%F0%9F%91%8B" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Casa Mobelle - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

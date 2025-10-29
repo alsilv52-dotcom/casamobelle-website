@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización Personalizada Casa Mobelle - Presupuesto Gratuito para Muebles a Medida</title>
+    <meta name="description" content="Solicita tu cotización personalizada en Casa Mobelle. Presupuesto gratuito para cocinas integrales, closets, vestidores y muebles a medida. Respuesta en 72 horas.">
+    <meta name="keywords" content="cotización muebles, presupuesto cocinas, cotizar closets, Casa Mobelle, presupuesto gratuito, muebles a medida">
+    <meta name="author" content="Casa Mobelle">
+    <meta property="og:title" content="Cotización Gratuita Casa Mobelle - Muebles a Medida">
+    <meta property="og:description" content="Obtén tu presupuesto personalizado sin compromiso. Especialistas en cocinas, closets y muebles únicos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://casamobelle.com/cotiza.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cotización Casa Mobelle - Presupuesto Gratuito">
+    <meta name="twitter:description" content="Solicita tu cotización personalizada para muebles a medida. Respuesta garantizada en 72 horas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cotiza-styles.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    
+    <!-- reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="Images/Logos/LogHor2.png" alt="Casa Mobelle Logo" style="height:48px; width:auto; display:block;">
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="cotiza.html" class="menu-cotiza-btn">Cotización personalizada</a></li>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería de proyectos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cotizacion-hero">
+        <div class="container">
+            <h1>Solicita tu Cotización Personalizada</h1>
+            <p>Diseños únicos creados especialmente para ti. Obtén tu presupuesto sin compromiso.</p>
+        </div>
+    </section>
+
+    <div class="cotizacion-content">
+        <div class="container">
+            <section class="proceso-pasos">
+                <div class="paso">
+                    <div class="paso-numero">1</div>
+                    <div class="paso-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Completa el Formulario</h3>
+                    <p>Proporciona detalles sobre tu proyecto, dimensiones y preferencias de diseño.</p>
+                </div>
+                
+                <div class="paso">
+                    <div class="paso-numero">2</div>
+                    <div class="paso-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Análisis y Contacto</h3>
+                    <p>Nuestro equipo analizará tu solicitud y te contactará para aclarar detalles.</p>
+                </div>
+                
+                <div class="paso">
+                    <div class="paso-numero">3</div>
+                    <div class="paso-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Recibe tu Cotización</h3>
+                    <p>Te enviaremos una cotización detallada en un plazo máximo de 72 horas.</p>
+                </div>
+            </section>
+
+            <form class="formulario-cotizacion" id="cotizacionForm">
+                <h2>Información del Proyecto</h2>
+                
+                <!-- Sección de ubicación -->
+                <div class="question-section">
+                    <h3>¿Dónde te ubicas? *</h3>
+                    <div class="button-grid" id="ciudadButtons">
+                        <button type="button" class="option-btn" data-value="cdmx">Ciudad de México</button>
+                        <button type="button" class="option-btn" data-value="estado-mexico">Estado de México</button>
+                        <button type="button" class="option-btn" data-value="otra">Otro</button>
+                    </div>
+                    <input type="hidden" id="ciudad" name="ciudad" required>
+                    
+                    <div class="form-group" id="otraCiudadGroup" style="display: none;">
+                        <label for="otraCiudad">Especifica tu ciudad *</label>
+                        <input type="text" id="otraCiudad" name="otraCiudad" placeholder="Ingresa tu ciudad">
+                    </div>
+                </div>
+
+                <!-- Sección de tipo de proyecto -->
+                <div class="question-section">
+                    <h3>¿Cuál es el proyecto de tu interés? *</h3>
+                    <div class="button-grid" id="proyectoButtons">
+                        <button type="button" class="option-btn" data-value="closet">
+                            <i class="fas fa-tshirt"></i>
+                            Clóset/Vestidor
+                        </button>
+                        <button type="button" class="option-btn" data-value="cocina">
+                            <i class="fas fa-utensils"></i>
+                            Cocina integral
+                        </button>
+                        <button type="button" class="option-btn" data-value="otro">
+                            <i class="fas fa-plus"></i>
+                            Otro proyecto personalizado
+                        </button>
+                    </div>
+                    <input type="hidden" id="tipoProyecto" name="tipoProyecto" required>
+                    
+                    <div class="form-group" id="otroProyectoGroup" style="display: none;">
+                        <label for="otroProyecto">Especifica tu proyecto *</label>
+                        <input type="text" id="otroProyecto" name="otroProyecto" placeholder="Describe tu proyecto personalizado">
+                    </div>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="codigoPostal">Código postal *</label>
+                        <input type="text" id="codigoPostal" name="codigoPostal" pattern="[0-9]{5}" placeholder="Ej: 52172" required>
+                    </div>
+                    
+                    <div class="form-group form-group-full">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group form-group-full">
+                    <label for="descripcion">Descripción del proyecto *</label>
+                    <textarea id="descripcion" name="descripcion" placeholder="Describe tu proyecto: dimensiones, materiales preferidos, estilo, etc." required></textarea>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="form-group form-group-full recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6LdrX7wrAAAAADDQ1fOLGdg3YyBXjniUfgz8KzU1" data-theme="light" data-size="normal"></div>
+                    <small class="recaptcha-note">
+                    </small>
+                </div>
+
+                <div class="submit-container">
+                    <p class="privacy-notice">
+                        Al enviar este formulario, usted acepta nuestro 
+                        <a href="Aviso_de_Privacidad_CasaMobelle_Actualizado.pdf" target="_blank" class="privacy-link">Aviso de Privacidad</a>.
+                    </p>
+                    <button type="submit" class="btn-cotizar">Solicitar Cotización</button>
+                </div>
+            </form>
+
+            <section class="cotizacion-info">
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Respuesta Rápida</h3>
+                    <p>Recibe tu cotización en máximo 72 horas con todos los detalles y especificaciones.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-ruler-combined"></i></div>
+                    <h3>Medidas Exactas</h3>
+                    <p>Nuestro equipo realiza visitas para tomar medidas precisas y asegurar un mejor servicio.<br>
+*Consultar condiciones de servicio</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Sin Compromiso</h3>
+                    <p>La cotización es completamente gratuita y no implica ningún compromiso de compra.</p>
+                </div>
+            </section>
+
+            <section class="garantias">
+                <h2>Nuestras Garantías</h2>
+                <div class="garantias-grid">
+                    <div class="garantia-item">
+                        <div class="garantia-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="garantia-text">
+                            <strong>Garantía de Calidad:</strong> Todos nuestros muebles cuentan con una garantía de un año por defectos de fabricación.
+                        </div>
+                    </div>
+                    
+                    <div class="garantia-item">
+                        <div class="garantia-icon"><i class="fas fa-tools"></i></div>
+                        <div class="garantia-text">
+                            <strong>Servicio Post-Venta:</strong> Soporte completo después de la instalación.
+                        </div>
+                    </div>
+                    
+                    <div class="garantia-item">
+                        <div class="garantia-icon"><i class="fas fa-medal"></i></div>
+                        <div class="garantia-text">
+                            <strong>Materiales Premium:</strong> Utilizamos solo materiales y herrajes nuevos de la más alta calidad en el mercado latinoamericano.
+                        </div>
+                    </div>
+                    
+                    <div class="garantia-item">
+                        <div class="garantia-icon"><i class="fas fa-users"></i></div>
+                        <div class="garantia-text">
+                            <strong>Equipo Experto:</strong> Carpinteros y diseñadores con años de experiencia.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="Images/Logos/Letrassf.png" alt="Casa Mobelle" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="footer-address">
+                Av Tecnológico 1834, San Salvador Tizatlali, 52172 San Salvador Tizatlalli, Méx.
+            </div>
+            <div class="footer-links">
+                <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+                <a href="Aviso_de_Privacidad_CasaMobelle_Actualizado.pdf" target="_blank">Aviso de Privacidad</a>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-icon visa" title="Visa">
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-icon mastercard" title="Mastercard">
+                    <i class="fab fa-cc-mastercard"></i>
+                </div>
+                <div class="payment-icon paypal" title="PayPal">
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <div class="payment-icon mercadopago" title="Mercado Pago">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/CasaMobelle" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/casamobelle/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5217222896977?text=Hola%20Casa%20Mobelle%20%F0%9F%91%8B" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Casa Mobelle - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="email-handler.js"></script>
+    <script src="scripts.js"></script>
+    <!-- Script de prueba para reCAPTCHA - Remover en producción -->
+    <!-- <script src="test-recaptcha.js"></script> -->
+</body>
+</html>

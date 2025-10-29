@@ -1,0 +1,281 @@
+/* ===== ESTILOS PARA MODALES DE EMAIL ===== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease-out;
+    position: relative;
+}
+
+/* Modal de éxito */
+.success-modal {
+    border-top: 5px solid #28a745;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 20px;
+    animation: checkmark 0.6s ease-out 0.3s both;
+}
+
+.success-modal h3 {
+    color: #28a745;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.success-modal p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Modal de error */
+.error-modal {
+    border-top: 5px solid #dc3545;
+}
+
+.error-icon {
+    font-size: 4rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+    animation: shake 0.5s ease-out;
+}
+
+.error-modal h3 {
+    color: #dc3545;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.error-modal p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.error-message {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem !important;
+    color: #721c24 !important;
+    margin: 15px 0 !important;
+}
+
+/* Botón del modal */
+.btn-modal {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.btn-modal:hover {
+    background: linear-gradient(135deg, #A0522D, #8B4513);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.btn-modal:active {
+    transform: translateY(0);
+}
+
+/* Estados del botón de envío */
+.btn-cotizar:disabled {
+    background: #6c757d !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-cotizar .fa-spinner {
+    margin-right: 8px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes checkmark {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .success-icon,
+    .error-icon {
+        font-size: 3rem;
+    }
+    
+    .success-modal h3,
+    .error-modal h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras para el área de carga de archivos */
+.file-upload-area.drag-over {
+    border-color: #8B4513;
+    background-color: rgba(139, 69, 19, 0.05);
+    transform: scale(1.02);
+}
+
+.file-upload-area.drag-over .file-upload-content {
+    color: #8B4513;
+}
+
+/* Estilos para archivos subidos */
+.uploaded-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.uploaded-file-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.file-info i {
+    font-size: 1.5rem;
+    margin-right: 12px;
+    color: #8B4513;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.file-size {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.remove-file-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-file-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+/* Indicador de progreso para carga de archivos */
+.file-upload-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #8B4513;
+    transition: width 0.3s ease;
+    border-radius: 0 0 8px 8px;
+}

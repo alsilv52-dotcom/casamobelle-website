@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista previa - Template de Contacto</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .preview-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .preview-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #182c72;
+        }
+        
+        .preview-title {
+            color: #182c72;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .preview-subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        iframe {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .btn {
+            background-color: #182c72;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #142551;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        
+        .datos-prueba {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .datos-prueba h3 {
+            color: #182c72;
+            margin-bottom: 10px;
+        }
+        
+        .datos-prueba code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1 class="preview-title">Vista Previa - Template de Contacto</h1>
+            <p class="preview-subtitle">Así se verá el email que reciben los clientes</p>
+        </div>
+        
+        <div class="datos-prueba">
+            <h3>📋 Datos de prueba utilizados:</h3>
+            <p><strong>Nombre:</strong> <code>María González</code></p>
+            <p><strong>Email:</strong> <code>maria.gonzalez@ejemplo.com</code></p>
+            <p><strong>Teléfono:</strong> <code>55 9876 5432</code></p>
+            <p><strong>Asunto:</strong> <code>proyecto</code></p>
+            <p><strong>Mensaje:</strong> <code>Hola, estoy interesada en renovar mi cocina. Me gustaría conocer más sobre sus diseños y precios. ¿Podrían contactarme para agendar una cita?</code></p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="cargarTemplate()">🔄 Recargar Template</button>
+            <button class="btn btn-secondary" onclick="window.open('contacto.html', '_blank')">📝 Ir al Formulario</button>
+        </div>
+        
+        <iframe id="templateFrame" src="contacto-template-preview.html" height="800"></iframe>
+    </div>
+    
+    <script>
+        function cargarTemplate() {
+            const iframe = document.getElementById('templateFrame');
+            iframe.src = iframe.src + '?reload=' + Date.now();
+        }
+        
+        // Recargar automáticamente cada 30 segundos para desarrollo
+        setInterval(cargarTemplate, 30000);
+        
+        console.log('👁️ Vista previa del template de contacto cargada');
+        console.log('🔄 El template se recarga automáticamente cada 30 segundos');
+    </script>
+</body>
+</html>
