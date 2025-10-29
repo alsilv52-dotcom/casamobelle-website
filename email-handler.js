@@ -136,7 +136,7 @@ async function enviarEmailAdmin(formData) {
     // Para el admin, enviamos los datos del cliente pero al email del admin
     const templateParams = {
         nombre: formData.nombre,
-        email: EMAILJS_CONFIG.EMAIL_ADMIN,
+        email: formData.email,
         telefono: formData.telefono,
         ciudad: getCiudadTexto(formData.ciudad, formData.otraCiudad),
         codigoPostal: formData.codigoPostal,
