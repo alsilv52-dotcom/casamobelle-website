@@ -8,7 +8,7 @@ const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'Wg5X527MYMwivPKvs', // Clave pública de EmailJS
     SERVICE_ID: 'service_i8ylqzi', // Service ID configurado
     TEMPLATE_CLIENTE: 'template_s60kolv', // Template de confirmación para cliente (EmailJS envía copia automática)
-    TEMPLATE_ADMIN: 'template_s60kolv', // Usar el mismo template o crear uno específico para admin
+    TEMPLATE_ADMIN: 'template_i5irfjo', // Usar el mismo template o crear uno específico para admin
     EMAIL_ADMIN: 'lopez.sil.beto@outlook.com' // Email del administrador
 };
 
