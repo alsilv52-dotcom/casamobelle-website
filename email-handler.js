@@ -169,7 +169,7 @@ ${formData.descripcion}
     try {
         const response = await emailjs.send(
             EMAILJS_CONFIG.SERVICE_ID,
-            'lopez.sil.beto@outlook.com',
+            EMAILJS_CONFIG.EMAIL_ADMIN,
             templateParams
         );
         console.log('✅ Email de notificación enviado al admin:', response);
