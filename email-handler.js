@@ -211,9 +211,11 @@ async function procesarFormularioCotizacion(formData) {
         console.log('✅ Email al cliente enviado');
 
         // 2) correo al admin
+        /*
         console.log('📧 Enviando email de notificación al admin...');
         await enviarEmailAdmin(formData);
         console.log('✅ Email al admin enviado');
+        */
         
         console.log('✅ Email enviado exitosamente');
         
